@@ -1,6 +1,5 @@
 rm(list=ls())
 
-setwd("C:\\Users\\JOUNAID\\Documents\\E4\\Analyse et Modélisation des Données\\Compétition Kaggle 2018")
 
 if(!require(gbm)){
   install.packages("gbm")
@@ -205,10 +204,10 @@ AllCorpus$Abstract <- gsub("New York|New York City", "NewYork", AllCorpus$Abstra
 AllCorpus$nNewYork.abstract <- count.c(AllCorpus$Abstract, "NewYork")
 
 AllCorpus$Abstract <- gsub(pattern="\\W",replace = " ",AllCorpus$Abstract)
-AllCorpus$Abstract <- gsub(pattern="\\â",replace = "",AllCorpus$Abstract)
+AllCorpus$Abstract <- gsub(pattern="\\Ã¢",replace = "",AllCorpus$Abstract)
 AllCorpus$Abstract <- gsub(pattern = "\\b[A-z]\\b{1}",replace=" ",AllCorpus$Abstract)
 AllCorpus$Abstract <- gsub(pattern="\\d",replace = " ",AllCorpus$Abstract)
-AllCorpus$Headline <- gsub(pattern="\\â",replace = "",AllCorpus$Headline)
+AllCorpus$Headline <- gsub(pattern="\\Ã¢",replace = "",AllCorpus$Headline)
 AllCorpus$Headline <- gsub(pattern = "\\b[A-z]\\b{1}",replace=" ",AllCorpus$Headline)
 AllCorpus$Headline <- gsub(pattern="\\d",replace = " ",AllCorpus$Headline)
 AllCorpus$Headline <- gsub(pattern="\\W",replace = " ",AllCorpus$Headline)
